@@ -68,6 +68,51 @@
   }
 
 
+  /* ---- Contact: copy the support address ----
+     A mailto: link does nothing on a device with no mail handler configured, so the
+     address is copyable as plain text as well. */
+  var copyBtn = document.getElementById('copyEmail');
+  var copyNote = document.getElementById('copyNote');
+  if (copyBtn) {
+    var noteDefault = copyNote ? copyNote.textContent : '';
+    copyBtn.addEventListener('click', function () {
+      var email = copyBtn.getAttribute('data-email') || '';
+
+      var done = function (ok) {
+        if (!copyNote) return;
+        copyNote.textContent = ok
+          ? 'Copied ' + email + ' to your clipboard.'
+          : 'Could not copy automatically. The address is ' + email;
+        copyNote.classList.toggle('is-copied', ok);
+        window.setTimeout(function () {
+          copyNote.textContent = noteDefault;
+          copyNote.classList.remove('is-copied');
+        }, 4000);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(function () { done(true); },
+                                                  function () { done(false); });
+        return;
+      }
+      // Older browsers, and any page not served over https.
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = email;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        done(ok);
+      } catch (e) {
+        done(false);
+      }
+    });
+  }
+
   /* ---- Current year in the footer ---- */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
