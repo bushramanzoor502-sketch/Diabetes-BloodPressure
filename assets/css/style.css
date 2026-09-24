@@ -324,8 +324,8 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 .screen-item {
   margin: 0;
   text-align: center;
-  flex: 0 1 calc((100% - 4 * 24px) / 5);
-  max-width: 230px;
+  flex: 0 1 calc((100% - 3 * 24px) / 4);
+  max-width: 250px;
 }
 
 /* One ratio for every frame, so every frame is the same height. */
@@ -526,7 +526,7 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
-  .screens .wrap { max-width: 860px; }
+  .screens .wrap { max-width: 840px; }
   .screens-grid { gap: 26px; }
   .screen-item { flex-basis: calc((100% - 2 * 26px) / 3); }
 }
@@ -620,4 +620,29 @@ section[id],
 @media (max-width: 760px) {
   section[id] { scroll-margin-top: 84px; }
   .to-top { right: 14px; bottom: 14px; width: 44px; height: 44px; }
+}
+
+/* ---------- Brand lockup ----------
+   "Blood Sugar & Diabetes Diary" is far longer than a one-word product name,
+   so the header lockup wraps to two tight lines instead of squeezing the nav. */
+.brand-name {
+  font-size: .98rem;
+  line-height: 1.15;
+  max-width: 15ch;
+  display: block;
+}
+.brand-name small { margin-top: 2px; }
+
+@media (max-width: 1180px) {
+  .nav-links { gap: 22px; }
+  .nav-links a { font-size: .9rem; }
+}
+
+@media (max-width: 1040px) {
+  .brand-name { max-width: 12ch; font-size: .9rem; }
+  .nav-links { gap: 16px; }
+}
+
+@media (max-width: 760px) {
+  .brand-name { max-width: none; font-size: .95rem; }
 }
