@@ -6,12 +6,12 @@
 <title>Privacy Policy for Blood Sugar &amp; Diabetes Diary</title>
 <meta name="description" content="How Blood Sugar &amp; Diabetes Diary handles your health data: stored locally on your device, no account, no cloud sync, no data sale.">
 <meta name="theme-color" content="#FBF3EA">
-<link rel="icon" href="assets/img/icons/launcher.webp?v=3">
-<link rel="apple-touch-icon" href="assets/img/icons/app_icon.png?v=3">
+<link rel="icon" href="assets/img/icons/launcher.webp?v=6">
+<link rel="apple-touch-icon" href="assets/img/icons/app_icon.png?v=6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 <header class="site-header">
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img src="assets/img/icons/launcher.webp?v=3" alt="">
+      <img src="assets/img/icons/launcher.webp?v=6" alt="">
       <span class="brand-name">Blood Sugar &amp; Diabetes Diary<small>by UtilEdge</small></span>
     </a>
 
@@ -30,10 +30,11 @@
       <li><a href="index.html#ranges">Health ranges</a></li>
       <li><a href="index.html#support">Support</a></li>
       <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+      <li><a href="mailto:bushramanzoor502@gmail.com">Contact</a></li>
     </ul>
 
     <div class="nav-cta">
-      <a class="btn btn-primary btn-sm" href="index.html#get">Get the app</a>
+      <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.my.diabetes.bloodpressure.tracker" target="_blank" rel="noopener">Get the app</a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
     </div>
   </div>
@@ -42,7 +43,7 @@
 <main>
 
 <section class="page-head" id="top">
-  <img class="hero-leaves" src="assets/img/icons/leaves.png?v=3" alt="">
+  <img class="hero-leaves" src="assets/img/icons/leaves.png?v=6" alt="">
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
@@ -91,23 +92,27 @@
 
     <h3>Health information you enter</h3>
     <ul>
-      <li>Blood pressure readings (systolic, diastolic, optional pulse), body state and notes</li>
-      <li>Blood sugar readings, measurement type (fasting, before or after meal, random, bedtime) and whether insulin was taken</li>
-      <li>Heart rate readings</li>
-      <li>Weight and height entries, and the BMI calculated from them</li>
+      <li>Blood pressure readings (systolic, diastolic and an optional pulse), the body state you select, and notes</li>
+      <li>Blood sugar readings, the measurement type (fasting, before or after meal, random, bedtime), whether insulin was taken, body state and notes</li>
+      <li>Heart rate readings, body state and notes</li>
+      <li>Weight and height entries in the units you chose, the gender and age you enter for the BMI calculation, and the resulting BMI value and category</li>
       <li>Water intake logged in millilitres against your daily goal</li>
       <li>Dates, times and free text notes attached to any of the above</li>
     </ul>
 
     <h3>Device generated information</h3>
     <ul>
-      <li>Daily step counts and derived values (calories, distance, active time) read from your phone's motion sensor</li>
+      <li>Daily step counts and the values derived from them (calories, distance, active time), read from your phone's hardware step sensor</li>
+      <li>An activity type signal, walking as opposed to cycling or driving, from Google Play services activity recognition. It keeps step counting accurate, is processed on your device, and is not sent to us</li>
     </ul>
 
     <h3>Preferences</h3>
     <ul>
       <li>Your onboarding status</li>
-      <li>Daily step goal, daily water goal and reminder schedules</li>
+      <li>Your daily step goal, and the step counter's own tracking state: the sensor baseline and last reading it uses to work out today's total</li>
+      <li>Your daily water goal, chosen cup size, water reminder interval, and whether water reminders are on</li>
+      <li>Your reminder schedules for blood pressure, blood sugar, heart rate and weight</li>
+      <li>A master notifications switch</li>
     </ul>
 
     <h3>What we do not collect</h3>
@@ -119,28 +124,40 @@
 
     <h2 id="pp-storage">3. Where your data is stored</h2>
     <p>
-      All health records are stored in a local database file inside the app's private storage area
-      on your device. Preferences and goals are stored in the app's private settings storage. These
-      locations are sandboxed by Android, so other apps cannot read them.
+      Your blood pressure, blood sugar, heart rate, weight and BMI records and your daily step
+      summaries are stored in a local database file inside the app's private storage area on your
+      device. Your water intake logs, goals, reminder schedules and other preferences are stored in
+      the app's private settings files. Both locations are sandboxed by Android, so other apps
+      cannot read them.
     </p>
     <p>
       Blood Sugar &amp; Diabetes Diary has no backend service for your health data. Nothing is uploaded, mirrored or
-      backed up to servers we control.
+      backed up to servers we control, and cloud backup is switched off for this app. If you move to
+      a new phone using Android's direct device to device transfer, Android itself copies your records
+      across to that device; they never pass through a server of ours.
     </p>
 
     <h2 id="pp-permissions">4. Permissions and why</h2>
     <ul>
       <li><strong>Physical activity / activity recognition</strong>. Required by Android to read the
           step sensor data used by the step counter. Decline it and every other feature still works.</li>
-      <li><strong>Notifications</strong>. Used to deliver the water, reading and medication reminders
-          you schedule, and to show the step counter's ongoing notification.</li>
+      <li><strong>Notifications</strong>. Used to deliver your water reminders and the blood pressure,
+          blood sugar, heart rate and weight reading reminders you schedule, and to show the step
+          counter's ongoing notification.</li>
       <li><strong>Foreground service (health)</strong>. Keeps step counting accurate while the app is
           in the background.</li>
       <li><strong>Exact alarms</strong>. Makes reminders fire at the time you set instead of drifting.</li>
       <li><strong>Run at startup</strong>. Registers your reminders again after the phone restarts so
           they are not silently lost.</li>
-      <li><strong>Internet</strong>. Used only for optional outbound actions such as opening the
-          Play Store listing or this website. Your health records are never transmitted.</li>
+      <li><strong>Internet</strong>. Used to download the illustration images shown with the Guides
+          articles from Unsplash's image service, and to open external links such as the Play Store
+          listing or this page. Those image requests tell Unsplash your IP address and rough region,
+          under their own privacy policy. <strong>No health data is ever included in them, and your
+          records are never transmitted.</strong></li>
+      <li><strong>Physical activity (Google Play services)</strong>. The legacy form of the activity
+          recognition permission, used on older Android versions for the same step tracking.</li>
+      <li><strong>Foreground service</strong>. The base permission that sits alongside the health
+          typed one above.</li>
     </ul>
     <p>
       You can revoke any of these at any time in Android Settings → Apps → Blood Sugar &amp; Diabetes Diary →
@@ -150,22 +167,35 @@
 
     <h2 id="pp-sharing">5. Sharing and export</h2>
     <p>
-      The export feature builds a CSV file containing your records and hands it to Android's standard
-      share sheet. At that point you choose the destination: email, a messaging app, cloud storage or a printer. Once the file leaves Blood Sugar &amp; Diabetes Diary it is governed by the privacy policy of whichever
+      The export feature builds a CSV file containing your blood pressure, blood sugar, heart rate and
+      weight or BMI records, and hands it to Android's standard share sheet. The weight section includes
+      the gender and age you entered. Your step history and water intake logs are <strong>not</strong>
+      included in the export. At that point you choose the destination: email, a messaging app, cloud storage or a printer. Once the file leaves Blood Sugar &amp; Diabetes Diary it is governed by the privacy policy of whichever
       app or service you selected, not by this one.
     </p>
     <p>Exported files are written to the app's temporary cache and shared through a secure file provider.</p>
 
     <h2 id="pp-thirdparty">6. Third parties</h2>
     <p>
-      Blood Sugar &amp; Diabetes Diary does not embed advertising networks or analytics SDKs that profile you, and it does
-      not send your health records to any third party. Links that open the Google Play Store are
-      handled by Google under their own terms and privacy policy.
+      Blood Sugar &amp; Diabetes Diary does not embed advertising networks or analytics SDKs, and we
+      never send your health records to any third party. Two outside components are involved, and
+      neither one receives health data:
     </p>
+    <ul>
+      <li><strong>Unsplash.</strong> The illustration images in the Guides articles are downloaded from
+          Unsplash's image service when you open an article. Like any image request on the web, this
+          reveals your IP address and rough region to Unsplash, under their privacy policy.</li>
+      <li><strong>Google Play services.</strong> Used on your device for activity recognition, so step
+          counting can tell walking apart from cycling or driving. Links that open the Google Play Store
+          are also handled by Google under their own terms.</li>
+    </ul>
 
     <h2 id="pp-retention">7. Retention and deletion</h2>
     <ul>
-      <li>Individual records: delete any entry from its history screen at any time.</li>
+      <li>Individual records: open any blood pressure, blood sugar, heart rate or weight entry from its
+          history and delete it, and remove individual water entries from the Water Reminder screen.</li>
+      <li>Recorded daily step history cannot be deleted entry by entry inside the app. It goes when you
+          clear the app's storage or uninstall.</li>
       <li>Everything at once: uninstalling the app, or clearing its storage from Android Settings,
           permanently removes the local database and all preferences.</li>
       <li>Because we hold no copy, deletion on your device is complete deletion.</li>
@@ -186,7 +216,8 @@
     <p>
       Privacy laws such as the GDPR and CCPA give you rights to access, correct, export and erase
       your personal data. Blood Sugar &amp; Diabetes Diary satisfies these directly in the app: your records are visible
-      and editable in full, exportable as CSV, and erasable record by record or all at once. There
+      and editable in full, the four reading types above are exportable as CSV, and records are
+      erasable one by one, with clearing the app's storage removing everything at once. There
       is no request to file with us, because there is no copy of your data held by us.
     </p>
 
@@ -211,10 +242,10 @@
 
     <h2 id="pp-contact">12. Contact</h2>
     <p>
-      Questions about this policy or about how Blood Sugar &amp; Diabetes Diary handles data? Reach us via the developer
-      contact listed on our
-      <a href="https://play.google.com/store/apps/developer?id=UtilEdge" target="_blank" rel="noopener">Google Play developer page</a>,
-      or through <strong>Settings → Rate Me</strong> in the app.
+      Questions about this policy, or about how Blood Sugar &amp; Diabetes Diary handles your data?
+      Email us at <a href="mailto:bushramanzoor502@gmail.com">bushramanzoor502@gmail.com</a> and we
+      will get back to you. You can also reach us through our
+      <a href="https://play.google.com/store/apps/developer?id=UtilEdge" target="_blank" rel="noopener">Google Play developer page</a>.
     </p>
 
     <p class="note-small" style="margin-top:40px;">
@@ -231,7 +262,7 @@
     <div class="footer-grid">
       <div>
         <a class="brand" href="index.html">
-          <img src="assets/img/icons/launcher.webp?v=3" alt="">
+          <img src="assets/img/icons/launcher.webp?v=6" alt="">
           <span class="brand-name">Blood Sugar &amp; Diabetes Diary<small>by UtilEdge</small></span>
         </a>
         <p class="footer-about">
@@ -265,6 +296,7 @@
         <ul>
           <li><a href="privacy.html">Privacy policy</a></li>
           <li><a href="privacy.html#disclaimer">Medical disclaimer</a></li>
+          <li><a href="mailto:bushramanzoor502@gmail.com">Contact us</a></li>
           <li><a href="https://play.google.com/store/apps/developer?id=UtilEdge" target="_blank" rel="noopener">More apps</a></li>
         </ul>
       </div>
@@ -279,6 +311,6 @@
 
 <a class="to-top" href="#top" aria-label="Back to top">↑</a>
 
-<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>
