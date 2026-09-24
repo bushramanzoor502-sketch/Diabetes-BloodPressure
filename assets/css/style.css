@@ -721,38 +721,77 @@ section[id],
 }
 .btn-primary.btn-sm { padding: 13px 24px; }
 
-/* ---------- Contact ---------- */
+/* ---------- Contact ----------
+   A two panel card: the product mark and reassurance on a tinted side, the address
+   and the single action on white. One button only, so there is no ambiguity about
+   which one actually sends mail. */
 .contact-card {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: stretch;
+  max-width: 820px;
+  margin-inline: auto;
   background: var(--white);
   border: 1px solid var(--green-border);
   border-radius: var(--radius-lg);
-  padding: clamp(32px, 5vw, 52px);
   box-shadow: var(--card-shadow);
-  text-align: center;
-  max-width: 720px;
-  margin-inline: auto;
-  position: relative;
   overflow: hidden;
 }
-.contact-card > * { position: relative; z-index: 1; }
 
+.contact-side {
+  background: linear-gradient(160deg, var(--hero-wash), var(--green-tint));
+  border-right: 1px solid var(--green-border);
+  padding: clamp(28px, 4vw, 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
 .contact-mark {
-  width: 64px; height: 64px; border-radius: 18px;
-  margin: 0 auto 18px; box-shadow: var(--card-shadow-sm);
+  width: 72px; height: 72px; border-radius: 20px;
+  margin-inline: auto;
+  box-shadow: 0 8px 20px rgba(46, 111, 51, .18);
+}
+.contact-tagline {
+  margin: 0;
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  line-height: 1.5;
+}
+
+.contact-main {
+  padding: clamp(28px, 4vw, 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 .contact-label {
-  font-size: .78rem; font-weight: 700; letter-spacing: .09em;
-  text-transform: uppercase; color: var(--muted); margin: 0 0 6px;
+  font-size: .74rem; font-weight: 800; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 8px;
 }
 .contact-address {
-  font-size: clamp(1.15rem, 3.2vw, 1.6rem);
+  display: inline-block;
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
   font-weight: 800; letter-spacing: -.02em;
-  color: var(--ink); margin: 0 0 26px;
+  color: var(--ink);
+  margin: 0 0 22px;
   word-break: break-all;
+  border-bottom: 2px solid var(--green-border);
+  padding-bottom: 3px;
+  transition: color .18s ease, border-color .18s ease;
 }
-.contact-actions {
-  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
-  margin-bottom: 18px;
+.contact-address:hover { color: var(--green-dark); border-color: var(--green); }
+
+.contact-btn { align-self: flex-start; }
+.contact-hint { margin: 16px 0 0; max-width: 42ch; }
+
+@media (max-width: 720px) {
+  .contact-card { grid-template-columns: 1fr; }
+  .contact-side { border-right: 0; border-bottom: 1px solid var(--green-border); }
+  .contact-main { text-align: center; }
+  .contact-btn { align-self: center; }
+  .contact-hint { margin-inline: auto; }
 }
-.contact-card .note-small { margin: 0; }
-.contact-card .note-small.is-copied { color: var(--green-dark); font-weight: 700; }

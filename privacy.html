@@ -6,12 +6,12 @@
 <title>Privacy Policy for Blood Sugar &amp; Diabetes Diary</title>
 <meta name="description" content="How Blood Sugar &amp; Diabetes Diary handles your health data: stored locally on your device, no account, no cloud sync, no data sale.">
 <meta name="theme-color" content="#FBF3EA">
-<link rel="icon" href="assets/img/icons/launcher.webp?v=10">
-<link rel="apple-touch-icon" href="assets/img/icons/app_icon.png?v=10">
+<link rel="icon" href="assets/img/icons/launcher.webp?v=12">
+<link rel="apple-touch-icon" href="assets/img/icons/app_icon.png?v=12">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=10">
+<link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 <header class="site-header">
   <div class="wrap nav">
     <a class="brand" href="index.html">
-      <img src="assets/img/icons/launcher.webp?v=10" alt="">
+      <img src="assets/img/icons/launcher.webp?v=12" alt="">
       <span class="brand-name">Blood Sugar &amp; Diabetes Diary<small>by UtilEdge</small></span>
     </a>
 
@@ -43,7 +43,7 @@
 <main>
 
 <section class="page-head" id="top">
-  <img class="hero-leaves" src="assets/img/icons/leaves.png?v=10" alt="">
+  <img class="hero-leaves" src="assets/img/icons/leaves.png?v=12" alt="">
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
@@ -102,8 +102,7 @@
 
     <h3>Device generated information</h3>
     <ul>
-      <li>Daily step counts and the values derived from them (calories, distance, active time), read from your phone's hardware step sensor</li>
-      <li>An activity type signal, walking as opposed to cycling or driving, from Google Play services activity recognition. It keeps step counting accurate, is processed on your device, and is not sent to us</li>
+      <li>Daily step counts and the values derived from them (calories, distance, active time), read from your phone's own cumulative hardware step sensor while the app is open</li>
     </ul>
 
     <h3>Preferences</h3>
@@ -139,13 +138,12 @@
 
     <h2 id="pp-permissions">4. Permissions and why</h2>
     <ul>
-      <li><strong>Physical activity / activity recognition</strong>. Required by Android to read the
-          step sensor data used by the step counter. Decline it and every other feature still works.</li>
+      <li><strong>Physical activity / activity recognition</strong>. Required by Android before any
+          app may read step sensor data. Decline it and every other feature still works, you simply
+          will not see step counts. The app runs no background service for this: it reads your
+          phone's own cumulative step counter while you have the app open.</li>
       <li><strong>Notifications</strong>. Used to deliver your water reminders and the blood pressure,
-          blood sugar, heart rate and weight reading reminders you schedule, and to show the step
-          counter's ongoing notification.</li>
-      <li><strong>Foreground service (health)</strong>. Keeps step counting accurate while the app is
-          in the background.</li>
+          blood sugar, heart rate and weight reading reminders you schedule.</li>
       <li><strong>Exact alarms</strong>. Makes reminders fire at the time you set instead of drifting.</li>
       <li><strong>Run at startup</strong>. Registers your reminders again after the phone restarts so
           they are not silently lost.</li>
@@ -154,10 +152,6 @@
           listing or this page. Those image requests tell Unsplash your IP address and rough region,
           under their own privacy policy. <strong>No health data is ever included in them, and your
           records are never transmitted.</strong></li>
-      <li><strong>Physical activity (Google Play services)</strong>. The legacy form of the activity
-          recognition permission, used on older Android versions for the same step tracking.</li>
-      <li><strong>Foreground service</strong>. The base permission that sits alongside the health
-          typed one above.</li>
     </ul>
     <p>
       You can revoke any of these at any time in Android Settings → Apps → Blood Sugar &amp; Diabetes Diary →
@@ -178,16 +172,15 @@
     <h2 id="pp-thirdparty">6. Third parties</h2>
     <p>
       Blood Sugar &amp; Diabetes Diary does not embed advertising networks or analytics SDKs, and we
-      never send your health records to any third party. Two outside components are involved, and
+      never send your health records to any third party. Two outside services are touched, and
       neither one receives health data:
     </p>
     <ul>
       <li><strong>Unsplash.</strong> The illustration images in the Guides articles are downloaded from
           Unsplash's image service when you open an article. Like any image request on the web, this
           reveals your IP address and rough region to Unsplash, under their privacy policy.</li>
-      <li><strong>Google Play services.</strong> Used on your device for activity recognition, so step
-          counting can tell walking apart from cycling or driving. Links that open the Google Play Store
-          are also handled by Google under their own terms.</li>
+      <li><strong>Google Play.</strong> Links that open the Google Play Store are handled by Google
+          under their own terms and privacy policy.</li>
     </ul>
 
     <h2 id="pp-retention">7. Retention and deletion</h2>
@@ -262,7 +255,7 @@
     <div class="footer-grid">
       <div>
         <a class="brand" href="index.html">
-          <img src="assets/img/icons/launcher.webp?v=10" alt="">
+          <img src="assets/img/icons/launcher.webp?v=12" alt="">
           <span class="brand-name">Blood Sugar &amp; Diabetes Diary<small>by UtilEdge</small></span>
         </a>
         <p class="footer-about">
@@ -311,6 +304,6 @@
 
 <a class="to-top" href="#top" aria-label="Back to top">↑</a>
 
-<script src="assets/js/main.js?v=10"></script>
+<script src="assets/js/main.js?v=12"></script>
 </body>
 </html>
