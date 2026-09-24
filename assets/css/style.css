@@ -707,3 +707,52 @@ section[id],
 @media (max-width: 1000px) {
   .nav-cta .btn { padding: 9px 16px; font-size: .85rem; }
 }
+
+/* ---------- Primary button: one pill, not two ----------
+   .btn carries `border: 2px solid transparent` for the ghost variant. On the gradient
+   primary that transparent border still gets painted under, and because the border-box
+   and padding-box corner curves differ, it left a visible darker rim that read as a
+   second button behind the first. The primary drops the border entirely and takes the
+   2px back as padding, so the box size is unchanged. */
+.btn-primary {
+  border: 0;
+  padding: 17px 32px;
+  background-clip: padding-box;
+}
+.btn-primary.btn-sm { padding: 13px 24px; }
+
+/* ---------- Contact ---------- */
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--green-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 52px);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+}
+.contact-card > * { position: relative; z-index: 1; }
+
+.contact-mark {
+  width: 64px; height: 64px; border-radius: 18px;
+  margin: 0 auto 18px; box-shadow: var(--card-shadow-sm);
+}
+.contact-label {
+  font-size: .78rem; font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 6px;
+}
+.contact-address {
+  font-size: clamp(1.15rem, 3.2vw, 1.6rem);
+  font-weight: 800; letter-spacing: -.02em;
+  color: var(--ink); margin: 0 0 26px;
+  word-break: break-all;
+}
+.contact-actions {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+  margin-bottom: 18px;
+}
+.contact-card .note-small { margin: 0; }
+.contact-card .note-small.is-copied { color: var(--green-dark); font-weight: 700; }
